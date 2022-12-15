@@ -1,0 +1,5 @@
+# macOS files
+.DS_Store
+
+# VSCodium files
+.mypy_cache/
