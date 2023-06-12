@@ -3,3 +3,5 @@
 
 # VSCodium files
 .mypy_cache/
+
+.idea
