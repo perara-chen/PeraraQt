@@ -4,8 +4,8 @@ import sys
 
 from PySide6.QtCore import QSize
 from PySide6.QtGui import QPixmap
-from PySide6.QtWidgets import (QApplication, QDialog, QLabel, QPushButton,
-                               QWidget)
+from PySide6.QtWidgets import (QApplication, QDialog, QLabel, QMessageBox,
+                               QPushButton, QWidget)
 
 
 class MainWindow(QWidget):
@@ -14,12 +14,12 @@ class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.initialize_ui()
+        self.more_info_window = MoreInfo()
     
     def initialize_ui(self):
         """Set up the GUI."""
         self.setWindowTitle("About Me")
         self.setFixedSize(QSize(450, 300))
-        
         self.setup_widgets()
         self.show()
     
@@ -46,7 +46,6 @@ class MainWindow(QWidget):
             Python, Swift</p><h2>Contact Information</h2><p>Phone :
             +959XXXXXXXXX<br>Email : username@example.com</p>""",
             self)
-        # summary_label.setFont(QFont("Arial", 12))
         summary_label.resize(330, 230)
         summary_label.move(100, 10)
         
@@ -64,7 +63,6 @@ class MainWindow(QWidget):
     
     def more_info(self):
         """Set up the More Info window."""
-        self.more_info_window = MoreInfo()
         self.more_info_window.show()
 
 
